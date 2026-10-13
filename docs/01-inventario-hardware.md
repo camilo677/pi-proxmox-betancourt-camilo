@@ -55,7 +55,7 @@ Ordenar al menos tres componentes para este equipo y su servicio.
 Distinguir cuello de botella, disponibilidad e integridad de los datos.
 
 | Prioridad y componente | Funcion | Efecto si es insuficiente | Efecto si falla | Evidencia y justificacion |
-|Almacenamiento|Memoria RAM|---|---|---|
+|---|---|---|---|---|
 | 1. | | | | |
 | 2. | | | | |
 | 3. | | | | |
