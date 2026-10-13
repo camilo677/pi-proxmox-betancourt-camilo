@@ -51,7 +51,13 @@ Supuestos: las necesidades de srv-aso y cli-linux son estimaciones y se ajustar�
 
 Explicar las cargas que pueden funcionar simultaneamente.
 
+Cargas simultáneas: Proxmox, srv-aso y cli-linux caben a la vez en RAM y disco, y en CPU quedan con 3 vCPU sobre 4 hilos. Es el peor caso asumido: todo cargado a la vez, con la CPU al límite pero sin saturar al host. Una cuarta VM no cabe sin romper el margen de RAM, y subir las vCPU a 2 + 2 dejaría al host sin hilos propios.
 
+Medido o estimado
+
+Medido, pendiente de comandos: hilos (lscpu), RAM visible (free -h), tamaño real del disco (lsblk) y red (ip -br link).
+Especificación de la ficha del fabricante: modelo de CPU, 8 GB soldados y 256 GB NVMe.
+Estimado: el reparto de arriba y los tamaños de ISOs, plantilla y copias.
 
 | Limitacion | Evidencia o estimacion | Consecuencia | Medida y limite que permanece |
 |---|---|---|---|
