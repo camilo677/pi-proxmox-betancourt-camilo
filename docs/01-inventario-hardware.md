@@ -21,9 +21,9 @@
 Contrastar el inventario con requisitos oficiales de la version prevista.
 Responder por separado y justificar con datos y fuentes:
 
-- Puedo instalar y arrancar Proxmox: PENDIENTE.
-- Puedo ejecutar el servidor ASO y el cliente del proyecto: PENDIENTE.
-- Condiciones o comprobaciones pendientes: PENDIENTE.
+- Puedo instalar y arrancar Proxmox: Sí, con condiciones. Los datos de la CPU obtenidos mediante el comando lscpu confirman que el equipo cuenta con una arquitectura de 64 bits (x86_64) y el conjunto de instrucciones de virtualización por hardware Intel VT-x, requisito indispensable para que el hipervisor KVM pueda funcionar. Asimismo, la comprobación con systemd-detect-virt devolviendo none demuestra que el sistema operativo actual se ejecuta de forma nativa sobre el disco duro TOSHIBA de 465,8 GB (lsblk), sin capas de virtualización previas que penalicen el rendimiento. La única condición indispensable es verificar y asegurar que las opciones de virtualización estén activadas en la BIOS/UEFI de la placa base. Fuente: Requisitos oficiales de instalación de Proxmox VE.
+- Puedo ejecutar el servidor ASO y el cliente del proyecto: Sí. El procesador Intel Pentium G4560 de 2 núcleos físicos y 4 hilos, junto con la capacidad de almacenamiento local disponible en el disco de más de 450 GB, cumple con los requerimientos necesarios para alojar tanto el nodo hipervisor como las máquinas virtuales o contenedores LXC invitados. Fuente: Documentación técnica y dimensionamiento de contenedores de Proxmox VE.
+- Condiciones o comprobaciones pendientes: Queda pendiente realizar una comprobación física en la BIOS/UEFI del equipo para confirmar que el soporte de virtualización por hardware (Intel VT-x) está habilitado correctamente y no presenta restricciones de firmware.
 
 ## 2. Que limitaciones tendre con este hardware?
 
