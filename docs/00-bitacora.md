@@ -28,7 +28,7 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Pruebas y resultados: 
   * Ejecución de `systemd-detect-virt`, obteniendo como resultado `none`, lo que confirma que el entorno opera de forma nativa (*bare-metal*) sin capas de virtualización previas.
 - Documentos o evidencias: 
-  * Ficha técnica de hardware, tabla comparativa de requisitos, análisis de componentes críticos, fuentes primarias y dictamen de viabilidad integrados en la documentación del repositorio (`../docs/01-inventario-hardware.md`).
+  * Ficha técnica de hardware, tabla comparativa de requisitos, análisis de componentes críticos, fuentes primarias y dictamen de viabilidad integrados en la documentación del repositorio [Ver inventario](01-inventario-hardware.md)
 - Incidencias y solucion o estado pendiente: 
   * Detectado aviso de mitigación (`VMX disabled`) en la CPU; pendiente comprobación y habilitación física del soporte Intel VT-x en la BIOS/UEFI de la placa base.
 - Siguiente paso: 
