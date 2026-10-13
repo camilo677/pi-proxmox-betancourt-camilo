@@ -2,9 +2,9 @@
 
 ## Contexto de la observacion
 
-- Fecha y sistema utilizado: PENDIENTE.
-- Modalidad, equipo anfitrion y VM VirtualBox si procede: PENDIENTE.
-- Version de Proxmox prevista: PENDIENTE.
+- Fecha y sistema utilizado: 13/10/26, Lliurex.
+- Modalidad, equipo anfitrion y VM VirtualBox si procede: Equipo anfitrión.
+- Version de Proxmox prevista: VE 9.2-1.
 
 ## Inventario inicial
 
