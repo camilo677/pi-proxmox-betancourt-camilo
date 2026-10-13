@@ -88,9 +88,15 @@ fabricante o plataforma virtual. Relacionarlas con las tres respuestas.
 
 ## Dictamen de viabilidad
 
-Apto, apto con condiciones o no apto para la propuesta actual: PENDIENTE.
+Apto, apto con condiciones o no apto para la propuesta actual: Apto con condiciones.
 
 Sintetizar las tres respuestas y las condiciones pendientes de comprobar.
+
+Viabilidad de instalación: El equipo es apto para instalar y arrancar Proxmox VE 9.2-1 debido a que cuenta con un procesador de arquitectura de 64 bits (x86_64) y soporte de virtualización por hardware Intel VT-x (vmx), operando actualmente de forma nativa.
+
+Ejecución del proyecto: Es capaz de alojar el servidor ASO y los clientes del proyecto mediante una correcta optimización de recursos y el uso preferible de contenedores LXC ligeros.
+
+Condiciones pendientes de comprobar: Queda pendiente la verificación física en la BIOS/UEFI de la placa base para asegurar que el soporte de virtualización está habilitado sin bloqueos por firmware, así como vigilar el rendimiento del disco duro mecánico y la gestión de la memoria RAM disponible en el entorno del aula.
 
 ## Evidencias y revision docente
 
