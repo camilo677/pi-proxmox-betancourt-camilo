@@ -10,7 +10,7 @@
 
 | Area | Dato observado y evidencia | Especificacion y fuente | Limite o diferencia | Justificacion |
 |---|---|---|---|---|
-| CPU | Modelo Intel(R) Pentium(R) CPU G4560 @ 3.50GHz, 2 núcleos físicos, 4 hilos, arquitectura x86_64 con instrucciones vmx y ept, comando lscpu | | | |
+| CPU | Modelo Intel(R) Pentium(R) CPU G4560 @ 3.50GHz, 2 núcleos físicos, 4 hilos, arquitectura x86_64, comando lscpu | Procesador x86_64 de 64 bits | | |
 | RAM | | | | |
 | Almacenamiento | | | | |
 | Red | | | | |
