@@ -10,7 +10,7 @@
 
 | Area | Dato observado y evidencia | Especificacion y fuente | Limite o diferencia | Justificacion |
 |---|---|---|---|---|
-| CPU | Modelo Intel(R) Pentium(R) CPU G4560 @ 3.50GHz, 2 núcleos físicos, 4 hilos, arquitectura x86_64 | Procesador x86_64 de 64 bits | Cumple con la arquitectura y el conjunto de instrucciones de virtualización necesario. | El procesador soporta virtualización por hardware nativa, permitiendo ejecutar máquinas virtuales completas sin emulación por software. |
+| CPU | Modelo Intel(R) Pentium(R) CPU G4560 @ 3.50GHz, 2 núcleos físicos, 4 hilos, arquitectura x86_64 | Procesador x86_64 de 64 bits | Cumple con la arquitectura y el conjunto de instrucciones de virtualización necesario. [ comando lscpu ]. | El procesador soporta virtualización por hardware nativa, permitiendo ejecutar máquinas virtuales completas sin emulación por software. |
 | RAM | Memoria base del equipo de aula (8 GB) | Mínimo recomendado de 2 GB para el nodo base, más la memoria asignada a cada máquina virtual o contenedor | Margen disponible ajustado, suficiente para el nodo y contenedores ligeros, pero limitado para múltiples VMs pesadas | Al tratarse de un entorno de laboratorio individual, se pueden desplegar servicios ligeros y contenedores optimizando la memoria asignada para evitar la saturación del host. |
 | Almacenamiento | | | | |
 | Red | | | | |
