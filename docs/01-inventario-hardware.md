@@ -10,7 +10,7 @@
 
 | Area | Dato observado y evidencia | Especificacion y fuente | Limite o diferencia | Justificacion |
 |---|---|---|---|---|
-| CPU | Modelo Intel(R) Pentium(R) CPU G4560 @ 3.50GHz, 2 núcleos físicos, 4 hilos, arquitectura x86_64, comando lscpu | Procesador x86_64 de 64 bits | | |
+| CPU | Modelo Intel(R) Pentium(R) CPU G4560 @ 3.50GHz, 2 núcleos físicos, 4 hilos, arquitectura x86_64, comando lscpu | Procesador x86_64 de 64 bits | Cumple con la arquitectura y el conjunto de instrucciones de virtualización necesario. | El procesador soporta virtualización por hardware nativa, permitiendo ejecutar el hipervisor KVM y máquinas virtuales completas sin emulación por software. |
 | RAM | | | | |
 | Almacenamiento | | | | |
 | Red | | | | |
