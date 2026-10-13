@@ -14,7 +14,7 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Incidencias y solucion o estado pendiente: PENDIENTE.
 - Siguiente paso: PENDIENTE: accion concreta para la proxima sesion.
 
-  Sesion 02 - 13/10/26
+## Sesion 02 - 13/10/26
 - Objetivo: Analizar los requisitos de hardware y la compatibilidad del equipo físico para el despliegue del hipervisor Proxmox VE 9.2-1.
 - Acciones realizadas: 
   * Extracción y análisis de especificaciones de hardware mediante los comandos del sistema (`lscpu`, `lsblk` y `systemd-detect-virt`).
