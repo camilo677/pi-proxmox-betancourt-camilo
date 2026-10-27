@@ -22,11 +22,11 @@ pveversion
 
 # Verificar el espacio de almacenamiento disponible
 df -h
+```
 
 ## Evidencias
 
 ## Incidencias
 
 ## Conclusion
-```
 [Volver al indice](../README.md)
