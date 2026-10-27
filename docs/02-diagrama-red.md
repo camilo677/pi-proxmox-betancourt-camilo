@@ -11,8 +11,17 @@ Diseñar la topología de red, el esquema de direccionamiento IP, los parámetro
 ## Comandos usados
 
 ```bash
+# Comprobar el nombre del hostname del sistema
+hostnamectl
 
-```
+# Verificar las direcciones IP y el estado de las interfaces de red
+ip -br addr
+
+# Comprobar la versión exacta de Proxmox VE instalada
+pveversion
+
+# Verificar el espacio de almacenamiento disponible
+df -h
 
 ## Evidencias
 
