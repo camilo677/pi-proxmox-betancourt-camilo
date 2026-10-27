@@ -34,6 +34,14 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Siguiente paso: 
   * Diseñar la topología de red y el esquema de direccionamiento IP para el nodo Proxmox y los servicios del proyecto ASO.
 
+## Sesion 03 - 20/10/16
+* **Objetivo:** Definir la topología de red, el direccionamiento IP estático y los requisitos de hardware para el hipervisor Proxmox VE.
+* **Acciones realizadas:**
+  * Planificación de la subred de laboratorio y asignación de direcciones estáticas: nodo Proxmox (`192.168.56.100`), servidor de servicios ASO (`192.168.56.10`) y cliente de pruebas (`192.168.56.20`). *(Nota: Posteriormente adaptado al esquema de doble adaptador)*.
+  * Identificación de puertos críticos de gestión (`8006/TCP` para la interfaz web, `22/TCP` para SSH).
+  * Diseño del diagrama lógico de red utilizando Mermaid para documentar la interconexión de los elementos.
+  * Tabla de direccionamiento inicial y diagrama de red en el documento de diseño de la práctica.
+
 Anadir una entrada con esta estructura en cada sesion. El historial de
 GitHub registra los commits; no hace falta incluir el hash del propio
 commit dentro de su entrada de bitacora.
