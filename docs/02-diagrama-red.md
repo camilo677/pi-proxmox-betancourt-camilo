@@ -58,7 +58,6 @@ Ninguna incidencia registrada durante la fase de diseño lógico y planificació
 
 ## Conclusion
 El diseño de red y la asignación de direccionamiento IP se han completado, estableciendo una base sólida y estructurada mediante el bridge vmbr0 para proceder a la implementación virtual del nodo Proxmox y sus servicios.
-<img width="680" height="451" alt="images" src="https://github.com/user-attachments/assets/17af61d5-91ae-403e-b197-a0edf492243e" />
 
 
 [Volver al indice](../README.md)
