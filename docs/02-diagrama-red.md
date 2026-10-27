@@ -27,6 +27,9 @@ df -h
 ## Evidencias
 
 ## Incidencias
+Ninguna incidencia registrada durante la fase de diseño lógico y planificación de red.
 
 ## Conclusion
+El diseño de red y la asignación de direccionamiento IP se han completado, estableciendo una base sólida y estructurada mediante el bridge vmbr0 para proceder a la implementación virtual del nodo Proxmox y sus servicios.
+
 [Volver al indice](../README.md)
