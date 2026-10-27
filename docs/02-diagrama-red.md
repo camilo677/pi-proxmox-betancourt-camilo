@@ -25,7 +25,33 @@ df -h
 ```
 
 ## Evidencias
+### Tabla de direccionamiento de red
 
+| Elemento | Nombre | IP | Función | Recursos |
+| :--- | :--- | :--- | :--- | :--- |
+| **Nodo Proxmox** | `pve-betancourt` | `192.168.1.100` | Hipervisor / Gestión principal | 2 vCPU, RAM host, Disco virtual (30-40 GB) |
+| **Servidor ASO** | `srv-aso` | `192.168.1.10` | Servicio principal (Servicios de Red / ASO) | 1 vCPU, 1 GB RAM, Disco virtual (10-20 GB) |
+| **Cliente** | `cli-linux` | `192.168.1.20` | Pruebas de conectividad y validación | 1 vCPU, 512 MB - 1 GB RAM, Disco virtual (10 GB) |
+
+* **Interfaz de gestión:** `vmbr0` (Puente de red asociado al hipervisor).
+* **Red o VLAN de laboratorio:** Subred `192.168.1.0/24`.
+* **Gateway (Puerta de enlace):** `192.168.1.1`.
+* **DNS:** `8.8.8.8` / DNS del centro educativo.
+* **Puertos necesarios:**
+  * `8006 (TCP):` Interfaz web de administración de Proxmox VE.
+  * `22 (TCP):` Acceso remoto seguro mediante SSH.
+  * `53 (TCP/UDP), 80 (TCP):` Servicios estándar de red y web.
+
+### Diagrama de red
+
+```mermaid
+graph TD
+    A["Internet o red centro"] --> B["pve-betancourt<br>Nodo Proxmox (192.168.1.100)"]
+    B --> C["vmbr0 / red laboratorio<br>(192.168.1.0/24)"]
+    C --> D["cli-linux<br>Cliente pruebas (192.168.1.20)"]
+    C --> E["srv-aso<br>Servicio ASO (192.168.1.10)"]
+    D -- "Pruebas autorizadas" --> E
+```
 ## Incidencias
 Ninguna incidencia registrada durante la fase de diseño lógico y planificación de red.
 
