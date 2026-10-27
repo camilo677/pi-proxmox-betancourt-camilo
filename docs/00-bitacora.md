@@ -34,13 +34,26 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Siguiente paso: 
   * Diseñar la topología de red y el esquema de direccionamiento IP para el nodo Proxmox y los servicios del proyecto ASO.
 
-## Sesion 03 - 20/10/16
+## Sesion 03 - 20/10/26
 * **Objetivo:** Definir la topología de red, el direccionamiento IP estático y los requisitos de hardware para el hipervisor Proxmox VE.
 * **Acciones realizadas:**
-  * Planificación de la subred de laboratorio y asignación de direcciones estáticas: nodo Proxmox (`192.168.56.100`), servidor de servicios ASO (`192.168.56.10`) y cliente de pruebas (`192.168.56.20`). *(Nota: Posteriormente adaptado al esquema de doble adaptador)*.
+  * Planificación de la subred de laboratorio y asignación de direcciones estáticas: nodo Proxmox (`192.168.56.100`), servidor de servicios ASO (`192.168.56.10`) y cliente de pruebas (`192.168.56.20`).
   * Identificación de puertos críticos de gestión (`8006/TCP` para la interfaz web, `22/TCP` para SSH).
   * Diseño del diagrama lógico de red utilizando Mermaid para documentar la interconexión de los elementos.
   * Tabla de direccionamiento inicial y diagrama de red en el documento de diseño de la práctica.
+  
+ ## Sesion 04 - 27/10/26
+* **Objetivo:** Implementar la máquina virtual de Proxmox en VirtualBox cumpliendo los requisitos de red de la práctica (NAT + Solo-Anfitrión), configurar la IP de gestión y validar el acceso web local.
+* **Acciones realizadas:**
+  * Configuración del **Adaptador 1 en modo NAT** (para dotar de conectividad exterior al hipervisor) y **Adaptador 2 en modo Solo-Anfitrión (`vboxnet0` con IP `192.168.56.1`)**.
+  * Verificación de la activación de las interfaces (`enp0s8` y `vmbr0` en estado `UP`) y comprobación de la versión del sistema y almacenamiento.
+  * Validación del acceso exitoso al panel de control web a través de `https://192.168.56.100:8006/`.
+* **Comandos ejecutados:**
+  ```bash
+  hostnamectl
+  ip -br addr
+  pveversion
+  df -h
 
 Anadir una entrada con esta estructura en cada sesion. El historial de
 GitHub registra los commits; no hace falta incluir el hash del propio
