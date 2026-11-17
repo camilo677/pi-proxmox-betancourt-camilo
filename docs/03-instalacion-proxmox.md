@@ -40,8 +40,11 @@ df -h
 El Almacenamiento
 
 <img width="735" height="269" alt="image" src="https://github.com/user-attachments/assets/948e7921-9548-465d-a35d-9bdca5fc35a8" />
+<img width="383" height="63" alt="image" src="https://github.com/user-attachments/assets/45cf65ba-d4a1-4040-be14-3c2695255e5b" />
+
 
 La Red
+
 
 <img width="659" height="147" alt="image" src="https://github.com/user-attachments/assets/d996d115-0fef-42b0-89de-47716652d69a" />
 <img width="690" height="249" alt="image" src="https://github.com/user-attachments/assets/ff7564ab-f541-4a1d-adcc-1971443630a7" />
