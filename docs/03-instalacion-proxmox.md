@@ -52,9 +52,24 @@ La Red
 
 Los Accesos y la Seguridad
 
+El usuario con el que se está entrando es el root y la contraseña que elegí instalar.
+El firewall interno de Proxmox no es necesario activarlo ahora mismo para esta práctica, por lo que se queda desactivado para evitar bloqueos de red innecesarios.
+
+Reparto de Recursos (CPU, Memoria y Disco)
+
+Para que el ordenador de clase no sufra y todo funcione fluido, asignaremos los recursos de forma equilibrada en el laboratorio:
+
+| Elemento | CPU / vCPU | RAM | Disco / Almacenamiento | Motivo del reparto |
+| :--- | :--- | :--- | :--- | :--- |
+| **Nodo Proxmox** | 2 vCPU | 4 GB | 32 GB (VDI) | Base del hipervisor y gestión web[cite: 1]. |
+| **`srv-aso`** | 1 vCPU | 1.5 GB | 10 GB (`local-lvm`) | Servidor principal de red y servicios[cite: 1]. |
+| **`cli-linux`** | 1 vCPU | 1 GB | 8 GB (`local-lvm`) | Cliente ligero de pruebas[cite: 1]. |
+| **Plantillas, ISO y Copias** | - | - | Margen disponible | Espacio reservado para ISOs y copias de seguridad. |
 
 ## Incidencias
 Estado de interfaz en DOWN: Tras añadir el segundo adaptador virtual en VirtualBox, la interfaz correspondiente (enp0s8) apareció inicialmente inactiva en Proxmox. Se solucionó actualizando el fichero /etc/network/interfaces para enlazar correctamente el puente vmbr0 a dicha interfaz y reiniciando el servicio de red.
+
+
 
 Se reinstaló la máquina virtual de Proxmox y se cambió la configuración de la máquina, habilitando opciones como nested paging y un disco duro dinámico de 80 gb.
 ## Conclusion
