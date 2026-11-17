@@ -47,6 +47,7 @@ La Red
 
 
 <img width="659" height="147" alt="image" src="https://github.com/user-attachments/assets/d996d115-0fef-42b0-89de-47716652d69a" />
+<img width="1085" height="137" alt="image" src="https://github.com/user-attachments/assets/0daf77fc-af81-4df1-8836-74c31e1a419d" />
 <img width="690" height="249" alt="image" src="https://github.com/user-attachments/assets/ff7564ab-f541-4a1d-adcc-1971443630a7" />
 
 Los Accesos y la Seguridad
