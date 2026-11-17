@@ -38,6 +38,7 @@ df -h
 
 ## Incidencias
 Estado de interfaz en DOWN: Tras añadir el segundo adaptador virtual en VirtualBox, la interfaz correspondiente (enp0s8) apareció inicialmente inactiva en Proxmox. Se solucionó actualizando el fichero /etc/network/interfaces para enlazar correctamente el puente vmbr0 a dicha interfaz y reiniciando el servicio de red.
+
 Se reinstaló la máquina virtual de Proxmox y se cambió la configuración de la máquina, habilitando opciones como nested paging y un disco duro dinámico de 80 gb.
 ## Conclusion
 Se ha completado con éxito la implantación de Proxmox VE en un entorno virtualizado anidado. El hipervisor se encuentra totalmente operativo y accesible a través de su interfaz web de gestión, listo para proceder al despliegue de los contenedores y máquinas virtuales requeridas en las siguientes fases del proyecto (srv-aso y cli-linux).
