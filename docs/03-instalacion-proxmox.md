@@ -36,6 +36,10 @@ df -h
 <img width="1870" height="940" alt="image" src="https://github.com/user-attachments/assets/31d6cee3-4cfc-474a-91e0-11f9e7d1c045" />
 <img width="773" height="606" alt="image" src="https://github.com/user-attachments/assets/5be2ced5-2371-48fa-b320-31d430511f35" />
 
+Sesión del 17/11
+
+<img width="717" height="211" alt="image" src="https://github.com/user-attachments/assets/d8c3f39a-7049-4ab0-b044-7821a364ed46" />
+
 ## Incidencias
 Estado de interfaz en DOWN: Tras añadir el segundo adaptador virtual en VirtualBox, la interfaz correspondiente (enp0s8) apareció inicialmente inactiva en Proxmox. Se solucionó actualizando el fichero /etc/network/interfaces para enlazar correctamente el puente vmbr0 a dicha interfaz y reiniciando el servicio de red.
 
