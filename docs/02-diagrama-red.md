@@ -29,15 +29,16 @@ df -h
 
 | Elemento | Nombre | IP | Función | Recursos |
 | :--- | :--- | :--- | :--- | :--- |
-| **Nodo Proxmox** | `pve-betancourt` | `192.168.56.100` | Hipervisor / Gestión principal | 2 vCPU, RAM host, Disco virtual (30-40 GB) |
-| **Servidor ASO** | `srv-aso` | `192.168.56.10` | Servicio principal (Servicios de Red / ASO) | 1 vCPU, 1 GB RAM, Disco virtual (10-20 GB) |
-| **Cliente** | `cli-linux` | `192.168.56.20` | Pruebas de conectividad y validación | 1 vCPU, 512 MB - 1 GB RAM, Disco virtual (10 GB) |
+| **Nodo Proxmox** | `pve-betancourt` | `192.168.56.100` | Hipervisor / Gestión principal | 2 vCPU, 4 GB RAM, Disco virtual (32 GB)[cite: 1] |
+| **Servidor ASO** | `srv-aso` | `192.168.100.10` | Servicio principal (Servicios de Red / ASO) | 1 vCPU, 1.5 GB RAM, Disco virtual (10 GB)[cite: 1] |
+| **Cliente** | `cli-linux` | `192.168.100.20` | Pruebas de conectividad y validación | 1 vCPU, 1 GB RAM, Disco virtual (8 GB)[cite: 1] |
 
-* **Interfaz de gestión:** `vmbr0` (Puente de red asociado al hipervisor).
-* **Red o VLAN de laboratorio:** Subred `192.168.56.0/24`.
-* **Gateway (Puerta de enlace):** `192.168.56.1`.
-* **DNS:** `8.8.8.8` / DNS del centro educativo.
-* **Puertos necesarios:**
+- **Interfaz de gestión:** `vmbr0` (Puente de red asociado a `nic1` / Solo-Anfitrión `vboxnet0`).
+- **Interfaz de laboratorio:** `vmbr1` (Puente Linux interno para aislar las VMs).
+- **Subred de gestión:** `192.168.56.0/24` (Gateway: `192.168.56.1`)[cite: 1].
+- **Subred de laboratorio:** `192.168.100.0/24` (Segmento interno aislado).
+- **DNS:** `8.8.8.8` / DNS del centro educativo.
+- **Puertos necesarios:**
   * `8006 (TCP):` Interfaz web de administración de Proxmox VE.
   * `22 (TCP):` Acceso remoto seguro mediante SSH.
   * `53 (TCP/UDP), 80 (TCP):` Servicios estándar de red y web.
@@ -46,11 +47,11 @@ df -h
 
 ```mermaid
 graph TD
-    A["Internet / Host"] -->|Adaptador 1: NAT| B["pve-betancourt<br>Nodo Proxmox (192.168.56.100)"]
-    C["PC Anfitrión (192.168.56.1)"] -->|Adaptador 2: Solo-Anfitrión / vboxnet0| B
-    B --> D["Red interna laboratorio<br>(192.168.56.0/24)"]
-    D --> E["cli-linux<br>Cliente pruebas (192.168.56.20)"]
-    D --> F["srv-aso<br>Servicio ASO (192.168.56.10)"]
+    A["Internet / Host"] -->|Adaptador 1: NAT (nic0)| B["pve-betancourt<br>Nodo Proxmox (192.168.56.100)"]
+    C["PC Anfitrión (192.168.56.1)"] -->|Adaptador 2: Solo-Anfitrión / vboxnet0 (nic1)| B
+    B -->|vmbr1: Red interna aislada| D["Segmento Laboratorio<br>(192.168.100.0/24)"]
+    D --> E["cli-linux<br>Cliente pruebas (192.168.100.20)"]
+    D --> F["srv-aso<br>Servicio ASO (192.168.100.10)"]
     E -- "Pruebas autorizadas" --> F
 ```
 ## Incidencias
