@@ -38,6 +38,7 @@ df -h
 
 ## Fase 4. Configuración base del nodo
 El Almacenamiento
+
 <img width="735" height="269" alt="image" src="https://github.com/user-attachments/assets/948e7921-9548-465d-a35d-9bdca5fc35a8" />
 
 La Red
