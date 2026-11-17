@@ -47,12 +47,13 @@ df -h
 
 ```mermaid
 graph TD
-    A["Internet / Host"] -->|Adaptador 1: NAT (nic0)| B["pve-betancourt<br>Nodo Proxmox (192.168.56.100)"]
-    C["PC Anfitrión (192.168.56.1)"] -->|Adaptador 2: Solo-Anfitrión / vboxnet0 (nic1)| B
+    A["Internet / Host"] -->|Adaptador 1: NAT nic0| B["pve-betancourt<br>Nodo Proxmox (192.168.56.100)"]
+    C["PC Anfitrión (192.168.56.1)"] -->|Adaptador 2: Solo-Anfitrión vboxnet0 nic1| B
     B -->|vmbr1: Red interna aislada| D["Segmento Laboratorio<br>(192.168.100.0/24)"]
     D --> E["cli-linux<br>Cliente pruebas (192.168.100.20)"]
     D --> F["srv-aso<br>Servicio ASO (192.168.100.10)"]
     E -- "Pruebas autorizadas" --> F
+
 ```
 ## Incidencias
 Ninguna incidencia registrada durante la fase de diseño lógico y planificación de red.
