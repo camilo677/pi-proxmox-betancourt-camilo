@@ -57,7 +57,6 @@ El firewall interno de Proxmox no es necesario activarlo ahora mismo para esta p
 
 Reparto de Recursos (CPU, Memoria y Disco)
 
-Para que el ordenador de clase no sufra y todo funcione fluido, asignaremos los recursos de forma equilibrada en el laboratorio:
 
 | Elemento | CPU / vCPU | RAM | Disco / Almacenamiento | Motivo del reparto |
 | :--- | :--- | :--- | :--- | :--- |
