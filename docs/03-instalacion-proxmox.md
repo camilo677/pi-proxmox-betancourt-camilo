@@ -54,6 +54,14 @@ La Red
 <img width="1085" height="137" alt="image" src="https://github.com/user-attachments/assets/0daf77fc-af81-4df1-8836-74c31e1a419d" />
 <img width="690" height="249" alt="image" src="https://github.com/user-attachments/assets/ff7564ab-f541-4a1d-adcc-1971443630a7" />
 
+Quien puede administrar el nodo
+
+| Cuenta | Dónde se utiliza | Rol / Permisos | Ámbito | Para qué la necesitas |
+| :--- | :--- | :--- | :--- | :--- |
+| `root@pam` | Panel PVE | `Administrator` | `/` (Global) | Administración total del hipervisor |
+| `demo-usuario@pve` | Panel PVE | `aula-lectura` (Sys.Syslog) | `/nodes/pve-betancourt` | Acceso restringido de auditoría de pruebas |
+| `demo2-usuario@pve` | Panel PVE | `aula-lectura2` (Sys.Audit) | `/nodes/pve-betancourt` | Acceso restringido de auditoría de pruebas |
+
 Los Accesos y la Seguridad
 
 El usuario con el que se está entrando es el root y la contraseña que elegí instalar.
