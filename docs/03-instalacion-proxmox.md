@@ -41,6 +41,10 @@ El Almacenamiento
 
 <img width="832" height="582" alt="image" src="https://github.com/user-attachments/assets/25b0a761-ef30-4b1c-b8fd-6b60c4e7eb3b" />
 
+| Almacenamiento | Backend | Ruta o Pool Real | Disco que lo Sostiene | Contenido Habilitado | Espacio Disponible |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **`local`** | Directory | `/var/lib/vz` | `/dev/sda3` (`pve-root`) | Importar, Respaldo, Imagen ISO, Plantilla de contenedor | ~23,8 GiB |
+| **`local-lvm`** | LVM-thin | `pve/data` | `/dev/sda3` (`pve-data`) | Imagen del disco, Contenedor | ~18 GiB | ~29,9 GiB
 
 
 La Red
